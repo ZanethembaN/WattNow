@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LightInTheSched Application</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>LightInTheSched Application</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/stage">See The Current Loadshedding Stage</a></li>
+        <li><a href="/provinces">Get A List Of Provinces</a></li>
+        <li><a href="/towns">Find Your City's Schedule</a></li>
+        <li><a href="/">Home</a></li>
+
+    </ul>
+</nav>
+
+
+    <section>
+        <h2>Welcome</h2>
+        <p>Explore our Loadshedding application features. Navigate using the menu above.</p>
+    </section>
+
+    <!-- Province Input Form -->
+    <br><br>
+    <section>
+        <h3>Search Province</h3>
+        <form action="/provinces.action" method="post">
+            <label for="province">Enter a Province:</label>
+            <input type="text" name="province" id="province" placeholder="e.g., Gauteng">
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Province List -->
+        <div th:if="${!#lists.isEmpty(provinces)}">
+            <h3>Registered Provinces</h3>
+            <ul th:each="province : ${provinces}">
+                <li th:text="${province}"></li>
+            </ul>
+        </div>
+        <p th:if="${#lists.isEmpty(provinces)}">No provinces currently registered.</p>
+
+        <!-- Province Error Message -->
+        <p th:if="${provinceError}" class="error">Oops! Invalid province selected. Please try again.</p>
+    </section>
+
+    <!-- Towns Section -->
+    <section th:if="${!#lists.isEmpty(towns)}">
+        <h3>Towns in Selected Province</h3>
+        <ul th:each="town : ${towns}">
+            <li>
+                <a th:text="${town.getName}"
+                   th:href="@{'/town_schedule?selectedTown=' + ${town.getName} + '&selectedProvince=' + ${province}}">
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <p th:if="${#lists.isEmpty(towns) && province != null}" class="error">
+        No towns found for the selected province. Try again!
+    </p>
+
+    <!-- Loadshedding Stages Section -->
+    <br><br><br>
+    <section>
+        <h3>Loadshedding Stages</h3>
+        <div th:if="${!#lists.isEmpty(stages)}">
+            <ul th:each="stage : ${stages}">
+                <li th:text="'Stage ' + stage.getStage"></li>
+            </ul>
+        </div>
+        <p th:if="${current_stage != null}" th:text="'Current Stage: ' + current_stage.getStage"></p>
+        <p th:if="${current_stage == null}">No current stage information available.</p>
+    </section>
+
+    <!-- Schedule Section -->
+    <section th:if="${schedule != null}">
+        <h3 th:text="'Schedule for ' + town"></h3>
+        <p th:text="'Loadshedding Stage: ' + stage"></p>
+        <table>
+            <thead>
+            <tr>
+                <th>Day</th>
+                <th>Slot Start</th>
+                <th>Slot End</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="day, itr : ${schedule.getDays}">
+                <td th:text="${itr.index + 1}"></td>
+                <td>
+                        <span th:each="slot : ${day.getSlots}">
+                            <span th:text="${slot.getStart}"></span><br />
+                        </span>
+                </td>
+                <td>
+                        <span th:each="slot : ${day.getSlots}">
+                            <span th:text="${slot.getEnd}"></span><br />
+                        </span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    <p th:if="${schedule == null && town != null}" class="error">
+        No schedule found for the selected town. Please verify your selection.
+    </p>
+
+<main layout:fragment="contents">
+
+</main>
+
+</body>
+</html>
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/index.html}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+<link rel="stylesheet" href="./css/style.css">
+
+    <head></head>
+
+    <body>
+
+    <header>
+        <h1>LightInTheSched Application</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/stage">See The Current Loadshedding Stage</a></li>
+            <li><a href="/provinces">Get A List Of Provinces</a></li>
+            <li><a href="/towns">Find Your City's Schedule</a></li>
+            <li><a href="/">Home</a></li>
+
+        </ul>
+    </nav>
+
+
+    <div layout:fragment="contents" th:if="${not #lists.isEmpty(stages)}">
+        <p>The following is a list of available stages:</p>
+        <ul th:each="stage : ${stages}">
+            <li><a href="#" th:text="${'stage '+stage.getStage}"></a></li>
+        </ul>
+    </div>
+
+    <div>
+        <p th:text="${'South Africa is currently on stage '+current_stage.getStage}"></p>
+    </div>
+
+    </body>
+</html>

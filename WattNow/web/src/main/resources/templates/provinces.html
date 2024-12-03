@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html
+        xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+        layout:decorate="~{/index.html}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+<link rel="stylesheet" href="./css/style.css">
+
+
+<head></head>
+<body>
+<!-- Header Section -->
+<header>
+    <h1>LightInTheSched Application</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/stage">See The Current Loadshedding Stage</a></li>
+        <li><a href="/provinces">Get A List Of Provinces</a></li>
+        <li><a href="/towns">Find Your City's Schedule</a></li>
+        <li><a href="/">Home</a></li>
+
+    </ul>
+</nav>
+
+<!-- Navigation Bar -->
+
+<!-- Main Content Section -->
+
+    <div layout:fragment="contents">
+        <p><b>We have the following registered provinces in South Africa:</b></p>
+        <ul th:each="province : ${provinces}">
+            <li th:text="${province}"></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

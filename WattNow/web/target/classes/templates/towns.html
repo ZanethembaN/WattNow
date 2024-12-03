@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{/index.html}">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+
+
+<head></head>
+
+<body>
+
+<header>
+    <h1>LightInTheSched Application</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/stage">See The Current Loadshedding Stage</a></li>
+        <li><a href="/provinces">Get A List Of Provinces</a></li>
+        <li><a href="/towns">Find Your City's Schedule</a></li>
+        <li><a href="/">Home</a></li>
+
+    </ul>
+</nav>
+
+    <div layout:fragment="contents">
+
+        <p>Enter a province to view a LoadShed schedule from your town</p>
+
+        <form action="/provinces.action" method="post" enctype="application/x-www-form-urlencoded">
+            <input type="text" name="province" id="province" placeholder="Enter Province">
+            <input type="submit" value="Submit">
+        </form>
+
+        <div th:unless="${#lists.isEmpty(towns)}">
+            <p>Oops, it looks like you selected an invalid province :( Try again!</p>
+            <p>See our <a href="/provinces">List of Provinces</a>!</p>
+        </div>
+
+        <div th:if="${#lists.isEmpty(towns)}">
+
+            <h2>Select Town</h2>
+
+            <form action="/town_schedule" method="get">
+                <label for="searchTown">Search Town:</label>
+                <input type="text" name="searchTown" id="searchTown" placeholder="Search for a town...">
+
+                <ul>
+                    <li th:each="town : ${towns}">
+                        <a th:text="${town.getName}" th:href="@{'/town_schedule?selectedTown=' + ${town.getName} + '&amp;selectedProvince=' + ${province}}"></a>
+                    </li>
+                </ul>
+
+                <input type="submit" value="Search Schedule">
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+</html>

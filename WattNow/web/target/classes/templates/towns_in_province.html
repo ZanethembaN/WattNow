@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{/index.html}">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pangolin">
+
+
+<head></head>
+
+<body>
+<header>
+    <h1>LightInTheSched Application</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/stage">See The Current Loadshedding Stage</a></li>
+        <li><a href="/provinces">Get A List Of Provinces</a></li>
+        <li><a href="/towns">Find Your City's Schedule</a></li>
+        <li><a href="/">Home</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+
+    <div layout:fragment="contents">
+        <h2>List of Towns in Province</h2>
+
+        <p th:text="'Selected Province: ' + ${province}"></p>
+
+        <div th:if="${!#lists.isEmpty(towns)}">
+            <ul>
+                <li th:each="town : ${towns}">
+                    <a th:text="${town.getName}"
+                       th:href="@{'/town_schedule?selectedTown=' + ${town.getName} + '&selectedProvince=' + ${province}}"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div th:if="${#lists.isEmpty(towns)}">
+            <p>No towns found in this province.</p>
+        </div>
+
+        <p><a href="/provinces">Go back to provinces list</a></p>
+    </div>
+
+
+</body>
+</html>
