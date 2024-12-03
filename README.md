@@ -39,14 +39,17 @@ Ensure you have the following installed:
 **Java**: Download Java
 
 ## Installation
+
+NOTE: Access the application via your browser or API client at http://localhost:5050.
+
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/wattnow.git
+git clone https://github.com/ZanethembaN/WattNow.git
 
-cd wattnow/web/src/main/java/wethinkcode/web
+cd WattNow/web/src/main/java/wethinkcode/web
 
 java -jar webservice.jar
 
-Access the application via your browser or API client at http://localhost:5050.
+
 
