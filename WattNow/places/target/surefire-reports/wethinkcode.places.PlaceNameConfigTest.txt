@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: wethinkcode.places.PlaceNameConfigTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! - in wethinkcode.places.PlaceNameConfigTest
+missingConfigFileFallsBackToDefaults  Time elapsed: 0.003 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: "/Users/zanethemba/Downloads/loadshed-project-3/places/places/resources/PlaceNamesZA2008.csv"
+ but was: "/Users/zanethemba/Downloads/loadshed-project-3/placesplaces/resources/PlaceNamesZA2008.csv"
+	at wethinkcode.places.PlaceNameConfigTest.missingConfigFileFallsBackToDefaults(PlaceNameConfigTest.java:42)
+

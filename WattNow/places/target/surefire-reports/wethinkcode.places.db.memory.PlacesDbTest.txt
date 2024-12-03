@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: wethinkcode.places.db.memory.PlacesDbTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.022 s <<< FAILURE! - in wethinkcode.places.db.memory.PlacesDbTest
+testTownsInProvince  Time elapsed: 0.021 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: 
+
+expected: 4
+ but was: 0
+	at wethinkcode.places.db.memory.PlacesDbTest.testTownsInProvince(PlacesDbTest.java:37)
+
