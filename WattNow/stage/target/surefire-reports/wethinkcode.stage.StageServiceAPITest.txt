@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: wethinkcode.stage.StageServiceAPITest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.35 s <<< FAILURE! - in wethinkcode.stage.StageServiceAPITest
+setNewStage_validStage  Time elapsed: 0.151 s  <<< ERROR!
+kong.unirest.UnirestException: unirest.shaded.org.apache.http.conn.HttpHostConnectException: Connect to localhost:7777 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_validStage(StageServiceAPITest.java:42)
+Caused by: unirest.shaded.org.apache.http.conn.HttpHostConnectException: Connect to localhost:7777 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_validStage(StageServiceAPITest.java:42)
+Caused by: java.net.ConnectException: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_validStage(StageServiceAPITest.java:42)
+
+setNewStage_illegalStageValue  Time elapsed: 0.002 s  <<< ERROR!
+kong.unirest.UnirestException: unirest.shaded.org.apache.http.conn.HttpHostConnectException: Connect to localhost:7777 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_illegalStageValue(StageServiceAPITest.java:55)
+Caused by: unirest.shaded.org.apache.http.conn.HttpHostConnectException: Connect to localhost:7777 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_illegalStageValue(StageServiceAPITest.java:55)
+Caused by: java.net.ConnectException: Connection refused
+	at wethinkcode.stage.StageServiceAPITest.setNewStage_illegalStageValue(StageServiceAPITest.java:55)
+

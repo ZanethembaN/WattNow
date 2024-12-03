@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="wethinkcode.stage.StageServiceMQTest" time="0.386" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="23"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/zanethemba/Downloads/loadshed-project-3/stage/target/test-classes:/Users/zanethemba/Downloads/loadshed-project-3/stage/target/classes:/Users/zanethemba/.m2/repository/org/apache/activemq/activemq-client/5.16.3/activemq-client-5.16.3.jar:/Users/zanethemba/.m2/repository/org/slf4j/slf4j-api/1.7.31/slf4j-api-1.7.31.jar:/Users/zanethemba/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar:/Users/zanethemba/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar:/Users/zanethemba/.m2/repository/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/Users/zanethemba/.m2/repository/io/javalin/javalin/5.0.1/javalin-5.0.1.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-server/11.0.12/jetty-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-http/11.0.12/jetty-http-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-util/11.0.12/jetty-util-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-io/11.0.12/jetty-io-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.12/jetty-webapp-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.12/jetty-servlet-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-security/11.0.12/jetty-security-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.12/jetty-xml-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.12/websocket-jetty-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.12/websocket-jetty-common-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.12/websocket-core-common-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.12/websocket-servlet-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.12/websocket-core-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-annotations/11.0.12/jetty-annotations-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-plus/11.0.12/jetty-plus-11.0.12.jar:/Users/zanethemba/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-jndi/11.0.12/jetty-jndi-11.0.12.jar:/Users/zanethemba/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-commons/9.3/asm-commons-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-tree/9.3/asm-tree-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-analysis/9.3/asm-analysis-9.3.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.12/websocket-jetty-api-11.0.12.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.7.10/kotlin-stdlib-jdk8-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.7.10/kotlin-stdlib-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.7.10/kotlin-stdlib-common-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.7.10/kotlin-stdlib-jdk7-1.7.10.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-java/3.13.10/unirest-java-3.13.10-standalone.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/zanethemba/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpcore-nio/4.4.13/httpcore-nio-4.4.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar:/Users/zanethemba/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/zanethemba/.m2/repository/com/google/code/gson/gson/2.9.0/gson-2.9.0.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-java/3.13.11/unirest-java-3.13.11.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-objectmapper-jackson/3.13.11/unirest-objectmapper-jackson-3.13.11.jar:/Users/zanethemba/Downloads/loadshed-project-3/common/target/common-1.0.jar:/Users/zanethemba/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/Users/zanethemba/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/zanethemba/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar:/Users/zanethemba/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar:/Users/zanethemba/.m2/repository/org/apache/activemq/activemq-all/5.15.8/activemq-all-5.15.8.jar:/Users/zanethemba/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/Users/zanethemba/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/zanethemba/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/Users/zanethemba/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.3/jackson-datatype-jsr310-2.13.3.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/zanethemba/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/zanethemba/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/zanethemba/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/zanethemba/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/zanethemba/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/zanethemba/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/zanethemba/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/zanethemba/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/Users/zanethemba/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/Users/zanethemba/.m2/repository/org/assertj/assertj-core/3.23.1/assertj-core-3.23.1.jar:/Users/zanethemba/.m2/repository/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.jar:"/>
+    <property name="java.vm.vendor" value="Homebrew"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="java.vm.specification.version" value="23"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ZA"/>
+    <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/23.0.1/libexec/openjdk.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/zanethemba/Downloads/loadshed-project-3/stage/target/surefire/surefirebooter7121951592253042159.jar /Users/zanethemba/Downloads/loadshed-project-3/stage/target/surefire 2024-12-02T18-04-08_578-jvmRun1 surefire7619729814542805845tmp surefire_22416464655009027938tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/zanethemba/Downloads/loadshed-project-3/stage/target/test-classes:/Users/zanethemba/Downloads/loadshed-project-3/stage/target/classes:/Users/zanethemba/.m2/repository/org/apache/activemq/activemq-client/5.16.3/activemq-client-5.16.3.jar:/Users/zanethemba/.m2/repository/org/slf4j/slf4j-api/1.7.31/slf4j-api-1.7.31.jar:/Users/zanethemba/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.1.1/geronimo-jms_1.1_spec-1.1.1.jar:/Users/zanethemba/.m2/repository/org/fusesource/hawtbuf/hawtbuf/1.11/hawtbuf-1.11.jar:/Users/zanethemba/.m2/repository/org/apache/geronimo/specs/geronimo-j2ee-management_1.1_spec/1.0.1/geronimo-j2ee-management_1.1_spec-1.0.1.jar:/Users/zanethemba/.m2/repository/io/javalin/javalin/5.0.1/javalin-5.0.1.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-server/11.0.12/jetty-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/toolchain/jetty-jakarta-servlet-api/5.0.2/jetty-jakarta-servlet-api-5.0.2.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-http/11.0.12/jetty-http-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-util/11.0.12/jetty-util-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-io/11.0.12/jetty-io-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-webapp/11.0.12/jetty-webapp-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-servlet/11.0.12/jetty-servlet-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-security/11.0.12/jetty-security-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-xml/11.0.12/jetty-xml-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-server/11.0.12/websocket-jetty-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-common/11.0.12/websocket-jetty-common-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-core-common/11.0.12/websocket-core-common-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/11.0.12/websocket-servlet-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-core-server/11.0.12/websocket-core-server-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-annotations/11.0.12/jetty-annotations-11.0.12.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-plus/11.0.12/jetty-plus-11.0.12.jar:/Users/zanethemba/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.0/jakarta.transaction-api-2.0.0.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/jetty-jndi/11.0.12/jetty-jndi-11.0.12.jar:/Users/zanethemba/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm/9.3/asm-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-commons/9.3/asm-commons-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-tree/9.3/asm-tree-9.3.jar:/Users/zanethemba/.m2/repository/org/ow2/asm/asm-analysis/9.3/asm-analysis-9.3.jar:/Users/zanethemba/.m2/repository/org/eclipse/jetty/websocket/websocket-jetty-api/11.0.12/websocket-jetty-api-11.0.12.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.7.10/kotlin-stdlib-jdk8-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.7.10/kotlin-stdlib-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.7.10/kotlin-stdlib-common-1.7.10.jar:/Users/zanethemba/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/zanethemba/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.7.10/kotlin-stdlib-jdk7-1.7.10.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-java/3.13.10/unirest-java-3.13.10-standalone.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpclient/4.5.13/httpclient-4.5.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar:/Users/zanethemba/.m2/repository/commons-logging/commons-logging/1.2/commons-logging-1.2.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpmime/4.5.13/httpmime-4.5.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpcore-nio/4.4.13/httpcore-nio-4.4.13.jar:/Users/zanethemba/.m2/repository/org/apache/httpcomponents/httpasyncclient/4.1.5/httpasyncclient-4.1.5.jar:/Users/zanethemba/.m2/repository/commons-codec/commons-codec/1.15/commons-codec-1.15.jar:/Users/zanethemba/.m2/repository/com/google/code/gson/gson/2.9.0/gson-2.9.0.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.2/jackson-databind-2.15.2.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.2/jackson-annotations-2.15.2.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-java/3.13.11/unirest-java-3.13.11.jar:/Users/zanethemba/.m2/repository/com/konghq/unirest-objectmapper-jackson/3.13.11/unirest-objectmapper-jackson-3.13.11.jar:/Users/zanethemba/Downloads/loadshed-project-3/common/target/common-1.0.jar:/Users/zanethemba/.m2/repository/org/slf4j/slf4j-log4j12/1.7.30/slf4j-log4j12-1.7.30.jar:/Users/zanethemba/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar:/Users/zanethemba/.m2/repository/org/apache/logging/log4j/log4j-api/2.17.1/log4j-api-2.17.1.jar:/Users/zanethemba/.m2/repository/org/apache/logging/log4j/log4j-core/2.17.1/log4j-core-2.17.1.jar:/Users/zanethemba/.m2/repository/org/apache/activemq/activemq-all/5.15.8/activemq-all-5.15.8.jar:/Users/zanethemba/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.4.0/junit-jupiter-api-5.4.0.jar:/Users/zanethemba/.m2/repository/org/apiguardian/apiguardian-api/1.0.0/apiguardian-api-1.0.0.jar:/Users/zanethemba/.m2/repository/org/opentest4j/opentest4j/1.1.1/opentest4j-1.1.1.jar:/Users/zanethemba/.m2/repository/org/junit/platform/junit-platform-commons/1.4.0/junit-platform-commons-1.4.0.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.13.3/jackson-datatype-jsr310-2.13.3.jar:/Users/zanethemba/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.2/jackson-core-2.15.2.jar:/Users/zanethemba/.m2/repository/com/google/guava/guava/31.1-jre/guava-31.1-jre.jar:/Users/zanethemba/.m2/repository/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar:/Users/zanethemba/.m2/repository/com/google/guava/listenablefuture/9999.0-empty-to-avoid-conflict-with-guava/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/Users/zanethemba/.m2/repository/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar:/Users/zanethemba/.m2/repository/org/checkerframework/checker-qual/3.12.0/checker-qual-3.12.0.jar:/Users/zanethemba/.m2/repository/com/google/errorprone/error_prone_annotations/2.11.0/error_prone_annotations-2.11.0.jar:/Users/zanethemba/.m2/repository/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar:/Users/zanethemba/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.4.0/junit-jupiter-engine-5.4.0.jar:/Users/zanethemba/.m2/repository/org/junit/platform/junit-platform-engine/1.4.0/junit-platform-engine-1.4.0.jar:/Users/zanethemba/.m2/repository/org/assertj/assertj-core/3.23.1/assertj-core-3.23.1.jar:/Users/zanethemba/.m2/repository/net/bytebuddy/byte-buddy/1.12.10/byte-buddy-1.12.10.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/zanethemba"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2024-10-15"/>
+    <property name="java.home" value="/opt/homebrew/Cellar/openjdk/23.0.1/libexec/openjdk.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/zanethemba/Downloads/loadshed-project-3/stage"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="apple.awt.application.name" value="ForkedBooter"/>
+    <property name="surefire.real.class.path" value="/Users/zanethemba/Downloads/loadshed-project-3/stage/target/surefire/surefirebooter7121951592253042159.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="23.0.1"/>
+    <property name="user.name" value="zanethemba"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="15.1.1"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Homebrew"/>
+    <property name="localRepository" value="/Users/zanethemba/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/Homebrew/homebrew-core/issues"/>
+    <property name="java.io.tmpdir" value="/var/folders/4y/_kbg58214d9d8h4tsd9ntt700000gp/T/"/>
+    <property name="java.version" value="23.0.1"/>
+    <property name="user.dir" value="/Users/zanethemba/Downloads/loadshed-project-3/stage"/>
+    <property name="os.arch" value="aarch64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/Users/zanethemba/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Homebrew"/>
+    <property name="java.vm.version" value="23.0.1"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.class.version" value="67.0"/>
+  </properties>
+  <testcase name="sendMqEventWhenStageChanges" classname="wethinkcode.stage.StageServiceMQTest" time="0.375">
+    <failure message="expected: &lt;200&gt; but was: &lt;500&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <200> but was: <500>
+	at wethinkcode.stage.StageServiceMQTest.sendMqEventWhenStageChanges(StageServiceMQTest.java:104)
+]]></failure>
+    <system-out><![CDATA[ INFO | Starting Javalin ...
+ INFO | 
+       __                  ___          ______
+      / /___ __   ______ _/ (_)___     / ____/
+ __  / / __ `/ | / / __ `/ / / __ \   /___ \
+/ /_/ / /_/ /| |/ / /_/ / / / / / /  ____/ /
+\____/\__,_/ |___/\__,_/_/_/_/ /_/  /_____/
+
+       https://javalin.io/documentation
+
+ INFO | Your JDK supports Loom. Javalin will prefer Virtual Threads by default. Disable with `ConcurrencyUtil.useLoom = false`.
+ INFO | Listening on http://localhost:7777/
+ INFO | You are running Javalin 5.0.1 (released October 2, 2022. Your Javalin version is 791 days old. Consider checking for a newer version.).
+ INFO | Javalin started in 2ms \o/
+ INFO | Using Persistence Adapter: MemoryPersistenceAdapter
+ INFO | JMX consoles can connect to service:jmx:rmi:///jndi/rmi://localhost:1099/jmxrmi
+ INFO | Apache ActiveMQ 5.16.3 (localhost, ID:Zanethembas-MacBook-Air.local-51104-1733155452074-0:1) is starting
+ INFO | Apache ActiveMQ 5.16.3 (localhost, ID:Zanethembas-MacBook-Air.local-51104-1733155452074-0:1) started
+ INFO | For help or more information please see: http://activemq.apache.org
+ INFO | Connector vm://localhost started
+ WARN | Uncaught exception
+com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `wethinkcode.loadshed.common.transfer.StageDO` (although at least one Creator exists): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"{"stage":1}"; line: 1, column: 2]
+	at com.fasterxml.jackson.databind.exc.MismatchedInputException.from(MismatchedInputException.java:63)
+	at com.fasterxml.jackson.databind.DeserializationContext.reportInputMismatch(DeserializationContext.java:1739)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleMissingInstantiator(DeserializationContext.java:1364)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1424)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at io.javalin.json.JavalinJackson.fromJsonString(JavalinJackson.kt:51)
+	at io.javalin.http.Context.bodyAsClass(Context.kt:130)
+	at io.javalin.http.Context.bodyAsClass(Context.kt:133)
+	at wethinkcode.stage.StageService.setNewStage(StageService.java:95)
+	at io.javalin.routing.HandlerEntry.handle(HandlerEntry.kt:19)
+	at io.javalin.http.servlet.DefaultTasks.HTTP$lambda-8$lambda-6$lambda-5(DefaultTasks.kt:35)
+	at io.javalin.http.servlet.JavalinServlet.handleTask(JavalinServlet.kt:79)
+	at io.javalin.http.servlet.JavalinServlet.handleSync(JavalinServlet.kt:46)
+	at io.javalin.http.servlet.JavalinServlet.service(JavalinServlet.kt:34)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at io.javalin.jetty.JavalinJettyServlet.service(JavalinJettyServlet.kt:58)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1571)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at io.javalin.jetty.JettyServer$start$wsAndHttpHandler$1.doHandle(JettyServer.kt:57)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1544)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.StatisticsHandler.handle(StatisticsHandler.java:173)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:572)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.lang.VirtualThread.run(VirtualThread.java:329)
+ INFO | Connector vm://localhost stopped
+ INFO | Apache ActiveMQ 5.16.3 (localhost, ID:Zanethembas-MacBook-Air.local-51104-1733155452074-0:1) is shutting down
+ INFO | Apache ActiveMQ 5.16.3 (localhost, ID:Zanethembas-MacBook-Air.local-51104-1733155452074-0:1) uptime 0.355 seconds
+ INFO | Apache ActiveMQ 5.16.3 (localhost, ID:Zanethembas-MacBook-Air.local-51104-1733155452074-0:1) is shutdown
+]]></system-out>
+  </testcase>
+</testsuite>
