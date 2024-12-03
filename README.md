@@ -3,17 +3,20 @@
 
 WattNow is a distributed loadshedding notifier system inspired by the Eskom loadshedding website. It offers a modular, scalable architecture for tracking stages, schedules, and locations impacted by loadshedding.
 
-## Features
+
+### Features
 
 **Stage Module**: Provides the current loadshedding stage.
 **Schedule Module**: Fetches and delivers schedules for specific areas.
 **Places Module**: Includes a PlaceNameService that retrieves area details from a CSV file.
 **Web Module**: Serves as the central hub, hosting the server and starting all other services.
 
-## System Architecture
+
+### System Architecture
 WattNow is a distributed system, with each module functioning independently and communicating seamlessly to deliver accurate loadshedding information.
 
-## Modules Overview
+
+### Modules Overview
 
 # Stage Module
 **StageService**: Retrieves and provides the current loadshedding stage.
