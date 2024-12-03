@@ -43,14 +43,10 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/wattnow.git
-Navigate to the web module directory:
-
 
 cd wattnow/web/src/main/java/wethinkcode/web
-Start the web service:
 
 java -jar webservice.jar
-The webservice will automatically initialize all other services.
 
 Access the application via your browser or API client at http://localhost:5050.
 
